@@ -1,5 +1,4 @@
-from libqtile import hook, qtile
-import os
+from libqtile import hook
 import subprocess
 
 from configuration.variables import *
@@ -8,9 +7,4 @@ from configuration.environment_varables import set_environment_variables
 @hook.subscribe.startup_once
 def startup_once():
     set_environment_variables()
-    if qtile.core.name == "x11":
-        subprocess.Popen(os.path.join(scripts_dir, "x11_startup.sh"))
-    elif qtile.core.name == "wayland":
-        subprocess.Popen(os.path.join(scripts_dir, "wayland_startup.sh"))
-    else:
-        pass
+    subprocess.Popen(os.path.join(scripts_dir, "startup.sh"), start_new_session=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
