@@ -1,5 +1,7 @@
 # Qtile Configuration
 
+Work in progress.
+
 Instead of rewriting my dotfiles README,
 I will just link it here
 
