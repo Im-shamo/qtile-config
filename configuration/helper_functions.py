@@ -1,6 +1,5 @@
 from libqtile.lazy import lazy
 import subprocess
-import json
 import os.path
 
 from configuration.variables import *

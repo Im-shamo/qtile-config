@@ -1,5 +1,4 @@
-from configuration.variables import *
-
+import os
 
 def set_environment_variables():
     os.environ["QT_QPA_PLATFORMTHEME"] = "qt6ct"    # Theming
