@@ -1,4 +1,5 @@
-import os
+from pathlib import Path
+from libqtile.log_utils import logger
 
 ### Key ###
 mod = "mod4"
@@ -7,8 +8,8 @@ mod = "mod4"
 file_explorer = "dolphin"
 terminal = "kitty"
 terminal_name = terminal
-menu = os.path.expanduser("~/.config/rofi/launchers/type-1/launcher.sh")
-powermenu = os.path.expanduser("~/.config/rofi/powermenu/type-1/powermenu.sh")
+menu = Path("~/.config/rofi/launchers/type-1/launcher.sh").expanduser()
+powermenu = Path("~/.config/rofi/powermenu/type-1/powermenu.sh").expanduser()
 browser = "brave"
 code_editor = "code"
 
@@ -40,4 +41,9 @@ border_normal_colour = "004d66" #Dark Blue
 border_width = 3
 
 ### Startups ###
-scripts_dir = os.path.expanduser("~/.config/qtile/scripts")
+scripts_dir = Path("~/.config/qtile/scripts").expanduser()
+
+### Logging ###
+logger.warning(f"{menu=}")
+logger.warning(f"{powermenu=}")
+logger.warning(f"{scripts_dir=}")

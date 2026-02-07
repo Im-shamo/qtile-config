@@ -66,9 +66,9 @@ keys = [
 
     # App launchers
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    Key([mod], "r", lazy.spawn(menu), desc="Launch rofi"),
+    Key([mod], "r", lazy.spawn(str(menu)), desc="Launch rofi"),
     Key([mod], "m", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    Key(["mod1", "control"], "Delete", lazy.spawn(powermenu), desc="Launch powermenu"),
+    Key(["mod1", "control"], "Delete", lazy.spawn(str(powermenu)), desc="Launch powermenu"),
     Key([mod], "e", lazy.spawn(file_explorer), desc=f"Spawn the file explorer ({file_explorer})"),
     Key([mod], "c", lazy.spawn(code_editor)),
     Key([mod], "b", lazy.spawn(browser), desc=f"Launch {browser}"),

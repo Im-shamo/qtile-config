@@ -93,7 +93,7 @@ class MyWidgets:
         return widget.TextBox(
             fmt="󰐥",
             fontsize=26,
-            mouse_callbacks={"Button1": lazy.spawn(os.path.expanduser("~/.config/rofi/powermenu/type-1/powermenu.sh"))},
+            mouse_callbacks={"Button1": lazy.spawn(str(powermenu))},
             **kwargs
         )
 
