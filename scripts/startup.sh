@@ -2,7 +2,7 @@
 
 /usr/lib/polkit-kde-authentication-agent-1 &    # Polkit Agent
 dunst &                                         # Notification
-udiskie -t --no-appindicator && sleep 1 &       # Disk mounting
+udiskie -t --appindicator && sleep 1 &       # Disk mounting
 clipse -listen &                                # Clipboard manager
 
 if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
