@@ -1,8 +1,6 @@
 from libqtile.lazy import lazy
 import subprocess
-import os.path
 
-from configuration.variables import *
 
 @lazy.function
 def swap_screens(qtile):
@@ -12,17 +10,11 @@ def swap_screens(qtile):
 
         group_0.toscreen(screen=1)
         group_1.toscreen(screen=0)
-    else:
-        pass
 
 
 def is_desktop():
-    result = subprocess.run(["hostnamectl", "chassis"], capture_output = True, text=True)
+    result = subprocess.run(["hostnamectl", "chassis"], capture_output=True, text=True)
     if result.stdout:
         return result.stdout[:-1] == "desktop"
     else:
         return False
-
-@lazy.function
-def run_script(qtile, script: str):
-    subprocess.run([os.path.join(scripts_dir,script)])

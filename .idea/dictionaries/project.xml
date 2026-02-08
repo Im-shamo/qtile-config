@@ -1,7 +1,16 @@
 <component name="ProjectDictionaryState">
   <dictionary name="project">
     <words>
+      <w>hostnamectl</w>
+      <w>pactl</w>
+      <w>pavucontrol</w>
       <w>platformtheme</w>
+      <w>playerctl</w>
+      <w>powermenu</w>
+      <w>rofi</w>
+      <w>swaylock</w>
+      <w>swww</w>
+      <w>xscreensaver</w>
     </words>
   </dictionary>
 </component>

@@ -4,7 +4,6 @@ from qtile_extras.widget.decorations import PowerLineDecoration
 from libqtile import qtile
 
 from configuration.variables import *
-from configuration.helper_functions import run_script
 
 widget_defaults = {
     "font": mono_font,
