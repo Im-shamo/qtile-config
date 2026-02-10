@@ -5,13 +5,24 @@ from configuration.variables import *
 from configuration.keybinds import keys
 from configuration.groups import groups
 
+launch_command = {}
+
+if qtile.core.name == "wayland":
+    launch_command["clipse"] = f"{terminal} clipse"
+    launch_command["btop"] = f"{terminal} btop"
+    launch_command["term"] = f"{terminal}"
+else:
+    launch_command["clipse"] = f"{terminal} -class clipse clipse"
+    launch_command["btop"] = f"{terminal} -class btop btop"
+    launch_command["term"] = f"{terminal}"
+
 groups.extend([
     ScratchPad(
         "terminals",
         [
             DropDown(
                 "clipse",
-                f"{terminal} -class clipse clipse",
+                launch_command["clipse"],
                 on_focus_lost_hide = False,
                 opacity = 1,
                 height = 0.4,
@@ -21,7 +32,7 @@ groups.extend([
             ),
             DropDown(
                 "btop",
-                f"{terminal} -class btop btop",
+                launch_command["btop"],
                 on_focus_host_hide = False,
                 opacity = 1,
                 height = 0.6,
@@ -31,7 +42,7 @@ groups.extend([
             ),
             DropDown(
                 "term",
-                terminal,
+                launch_command["term"],
                 on_focus_host_hide = False,
                 opacity = 1,
                 height = 0.5,
