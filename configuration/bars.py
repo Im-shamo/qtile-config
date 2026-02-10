@@ -19,7 +19,6 @@ class MyBars:
                 widget.Net(font=mono_font, format= " {down:^5.1f}{down_suffix:<2}", background=colours["BLUE"],**arrow_right),  # blue
                 widget.Net(font=mono_font, format= " {up:^5.1f}{up_suffix:<2}", background=colours["DARK_GREEN"],**arrow_right),  # green
                 widget.NetGraph(
-                    mouse_callbacks={"Button1": lazy.spawn("networkmanager_dmenu")},
                     background=colours["GREEN"],
                     graph_color="215578",
                     type="line",
@@ -36,7 +35,7 @@ class MyBars:
             opacity = 1,
             margin = bar_margin
         )
-    def main_bar_x11(self):
+    def main_bar_x11_laptop(self):
         return bar.Bar(
             [
                 widget.CurrentLayoutIcon(mouse_callbacks={"Button1": lazy.next_layout()}),
@@ -49,7 +48,6 @@ class MyBars:
                 widget.Net(font=mono_font, format= " {down:^5.1f}{down_suffix:<2}", background=colours["BLUE"],**arrow_right),  # blue
                 widget.Net(font=mono_font, format= " {up:^5.1f}{up_suffix:<2}", background=colours["DARK_GREEN"],**arrow_right),  # green
                 widget.NetGraph(
-                    mouse_callbacks={"Button1": lazy.spawn("networkmanager_dmenu")},
                     background=colours["GREEN"],
                     graph_color="215578",
                     type="line",
@@ -82,7 +80,7 @@ class MyBars:
             opacity = 1,
             margin = bar_margin
         )
-    
+
     def small_screen_bar_x11(self):
         return bar.Bar(
             [
@@ -124,38 +122,6 @@ class MyBars:
         )
 
     # TODO: Add wayland
-    def main_bar_wayland(self):
-        return bar.Bar(
-            [
-                widget.CurrentLayoutIcon(mouse_callbacks={"Button1": lazy.next_layout()}),
-                my_widgets.group_box(),
-                widget.WindowName(),
-                widget.Prompt(),
-                widget.StatusNotifier(icon_theme="Adwaita"), # As systray is no available in wayland
-                widget.TextBox(**arrow_right),
-                my_widgets.wallpaper_switcher(**arrow_right),
-                widget.Net(font=mono_font, format= " {down:^5.1f}{down_suffix:<2}", background=colours["BLUE"],**arrow_right),  # blue
-                widget.Net(font=mono_font, format= " {up:^5.1f}{up_suffix:<2}", background=colours["DARK_GREEN"],**arrow_right),  # green
-                widget.NetGraph(
-                    mouse_callbacks={"Button1": lazy.spawn("networkmanager_dmenu")},
-                    background=colours["GREEN"],
-                    graph_color="215578",
-                    type="line",
-                    line_width=2,
-                    **arrow_right,
-                ),
-                my_widgets.volume(),
-                my_widgets.microphone(**arrow_right),
-                widget.Clock(format="%d/%m/%Y %a %I:%M %p", background=colours["LIGHT_BLUE"], **arrow_right),   # cyan
-                widget.Battery(format="  {percent:.0%}",emoji=True,background=colours["BLUE"], **arrow_right),
-                my_widgets.power_button(),
-                widget.Spacer(length=5),
-            ],
-            26,
-            opacity = 1,
-            margin = bar_margin
-        )
-
     def main_bar_wayland_desktop(self):
         return bar.Bar(
             [
@@ -169,7 +135,6 @@ class MyBars:
                 widget.Net(font=mono_font, format= " {down:^5.1f}{down_suffix:<2}", background=colours["BLUE"],**arrow_right),  # blue
                 widget.Net(font=mono_font, format= " {up:^5.1f}{up_suffix:<2}", background=colours["DARK_GREEN"],**arrow_right),  # green
                 widget.NetGraph(
-                    mouse_callbacks={"Button1": lazy.spawn("networkmanager_dmenu")},
                     background=colours["GREEN"],
                     graph_color="215578",
                     type="line",
@@ -179,6 +144,37 @@ class MyBars:
                 my_widgets.volume(),
                 my_widgets.microphone(**arrow_right),
                 widget.Clock(format="%d/%m/%Y %a %I:%M %p", background=colours["LIGHT_BLUE"], **arrow_right),   # cyan
+                my_widgets.power_button(),
+                widget.Spacer(length=5),
+            ],
+            26,
+            opacity = 1,
+            margin = bar_margin
+        )
+
+    def main_bar_wayland_laptop(self):
+        return bar.Bar(
+            [
+                widget.CurrentLayoutIcon(mouse_callbacks={"Button1": lazy.next_layout()}),
+                my_widgets.group_box(),
+                widget.WindowName(),
+                widget.Prompt(),
+                widget.StatusNotifier(icon_theme="Adwaita"), # As systray is not available in wayland
+                widget.TextBox(**arrow_right),
+                my_widgets.wallpaper_switcher(**arrow_right),
+                widget.Net(font=mono_font, format= " {down:^5.1f}{down_suffix:<2}", background=colours["BLUE"],**arrow_right),  # blue
+                widget.Net(font=mono_font, format= " {up:^5.1f}{up_suffix:<2}", background=colours["DARK_GREEN"],**arrow_right),  # green
+                widget.NetGraph(
+                    background=colours["GREEN"],
+                    graph_color="215578",
+                    type="line",
+                    line_width=2,
+                    **arrow_right,
+                ),
+                my_widgets.volume(),
+                my_widgets.microphone(**arrow_right),
+                widget.Clock(format="%d/%m/%Y %a %I:%M %p", background=colours["LIGHT_BLUE"], **arrow_right),   # cyan
+                widget.Battery(format="  {percent:.0%}",emoji=True,background=colours["BLUE"], **arrow_right),
                 my_widgets.power_button(),
                 widget.Spacer(length=5),
             ],

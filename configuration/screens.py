@@ -11,7 +11,7 @@ if qtile.core.name == "x11":
         ]
     else:
         screens = [
-            Screen(top = my_bars.main_bar_x11())
+            Screen(top = my_bars.main_bar_x11_laptop())
         ]
 
 elif qtile.core.name == "wayland":
@@ -21,7 +21,7 @@ elif qtile.core.name == "wayland":
         ]
     else:
         screens = [
-            Screen(top = my_bars.main_bar_wayland())
+            Screen(top = my_bars.main_bar_wayland_laptop())
         ]
 
 else:
