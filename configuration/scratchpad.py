@@ -11,7 +11,7 @@ groups.extend([
         [
             DropDown(
                 "clipse",
-                f"{terminal} --class clipse -e clipse",
+                f"{terminal} -class clipse clipse",
                 on_focus_lost_hide = False,
                 opacity = 1,
                 height = 0.4,
@@ -21,7 +21,7 @@ groups.extend([
             ),
             DropDown(
                 "btop",
-                f"{terminal} --class btop -e btop",
+                f"{terminal} -class btop btop",
                 on_focus_host_hide = False,
                 opacity = 1,
                 height = 0.6,
