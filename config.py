@@ -1,8 +1,7 @@
-from libqtile import qtile
 from libqtile.backend.wayland import InputConfig
 
 from configuration import *
-from configuration.startup import startup_once
+from configuration.hooks import startup_once
 
 dgroups_key_binder = None
 dgroups_app_rules = []
