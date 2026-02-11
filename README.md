@@ -7,7 +7,7 @@ Either use this qtile-config as is or use the complate [dotfiles](https://github
 Instead of rewriting my dotfiles README,
 I will just link it here
 
-Go Here -> [README](https://github.com/Im-shamo/dotfiles/blob/main/README.md)
+Go Here -> [README](https://github.com/Im-shamo/dotfiles)
 
 
 ## List of programs used in this qtile-config.
