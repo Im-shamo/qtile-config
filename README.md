@@ -7,13 +7,13 @@ Either use this qtile-config as is. Use the complete [dotfiles](https://github.c
 Instead of rewriting my dotfiles README, I will just link it here
 
 Go Here -> [README](https://github.com/Im-shamo/dotfiles/blob/main/README.md)
+## Previews 
 
+![windows](images/qtile-app-wm.png)
 
-## List of programs used in this qtile-config.
+![no windows](images/qtile-no-app-wm.png)
 
-The commands in this mini guide is only for **Arch Linux or it's derivatives**. If it is something else, just follow the instructions and get the required packages. You may have to build from source if the programs are not available in the distro repos.
-
-### Keybinds
+## Keybinds
 <details>
 <summary>Expand</summary>
 
@@ -31,6 +31,9 @@ Note >>> `ctrl` + `alt` + `Delete`: Powermenu <<<
 
 </details>
 
+## List of programs used in this qtile-config.
+
+The commands in this mini guide is only for **Arch Linux or it's derivatives**. If it is something else, just follow the instructions and get the required packages. You may have to build from source if the programs are not available in the distro repos.
 
 
 ### Installation
