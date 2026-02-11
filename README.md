@@ -43,7 +43,7 @@ make deps
 make build-wayland
 uv tool install .[dev,widgets,optional-core]
 
-cd ~/.local/share/uv/too/qtile
+cd ~/.local/share/uv/tool/qtile
 source bin/active
 uv pip install "$qtileExtrasPath"
 deactivate
