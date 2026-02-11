@@ -18,10 +18,10 @@ The commands in this mini guide is only for **Arch Linux or it's derivatives**. 
 
 #### Install from distro package repository.
 
-Install `qtile` and all it's dependencies with `qtile-extras`. Also, install `xserver`, `xwayland`, `xrandr`, `xrdb` and `wlr-randr`.
+Install `qtile` and all it's dependencies with `qtile-extras`. Also, install `xorg`, `xwayland`, `xrandr`and `wlr-randr`.
 
 ```bash
-yay -S --needed qtile qtile-extras alsa-utils canto-daemon cmus khal libpulse lm_sensors python-aiohttp python-bowler python-dbus-fast python-isort python-iwlib python-keyring python-libcst python-mpd2 python-prompt_toolkit python-psutil python-pytz python-setproctitle python-pyxdg xorg-xwayland xorg-xrandr wlr-randr xorg-server xorg-xrdb
+yay -S --needed qtile qtile-extras alsa-utils canto-daemon cmus khal libpulse lm_sensors python-aiohttp python-bowler python-dbus-fast python-isort python-iwlib python-keyring python-libcst python-mpd2 python-prompt_toolkit python-psutil python-pytz python-setproctitle python-pyxdg xorg-xwayland xorg-xrandr wlr-randr xorg xorg-apps
 ```
 
 
@@ -29,10 +29,10 @@ yay -S --needed qtile qtile-extras alsa-utils canto-daemon cmus khal libpulse lm
 
 This is my prefer way. Though **not really recommended** because it can be unstable.
 
-Fallow the [qtile-docs](https://docs.qtile.org/en/latest/manual/install/index.html#id1) and get the required depdendencies for building from source. Also, install `xserver`, `xwayland`, `xrandr`, `xrdb` and `wlr-randr`
+Fallow the [qtile-docs](https://docs.qtile.org/en/latest/manual/install/index.html#id1) and get the required depdendencies for building from source. Also, install `xorg`, `xwayland`, `xrandr`and `wlr-randr`.
 
 ```bash
-yay -S --needed uv wlroots0.19 wayland wayland-protocols xorg-xwayland xorg-xrandr wlr-randr xorg-server xorg-xrdb
+yay -S --needed uv wlroots0.19 wayland wayland-protocols xorg-xwayland xorg-xrandr wlr-randr xorg xorg-apps
 
 git clone https://github.com/qtile/qtile.git
 git clone https://github.com/elparaguayo/qtile-extras.git
@@ -83,6 +83,7 @@ Install in a fresh Arch Linux installation to avoid programs.
 - Resource Viewer: `btop`
 - Screen Brightness: `brightnessctl`
 - Disk Manager: `udiskie`
+- Fonts: `noto-fonts`, `noto-fonts-cjk`, `noto-fonts-emoji`, `noto-fonts-extra`, `ttf-hack-nerd`, `otf-droid-nerd`
 - Misc: `archlinux-xdg-menu`, `xdg-user-dirs`, `selectdefaultapplication-git`<sup>AUR</sup>
 
 ```bash  
@@ -107,5 +108,6 @@ yay -S --needed \
     btop \
     brightnessctl \
     udiskie \
+    noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-hack-nerd \
     archlinux-xdg-menu xdg-user-dirs selectdefaultapplication-git
 ```
