@@ -28,7 +28,7 @@ yay -S --needed qtile qtile-extras alsa-utils canto-daemon cmus khal libpulse lm
 
 This is my prefer way. Though **not really recommended** because it can be unstable.
 
-Follow the [qtile-docs](https://docs.qtile.org/en/latest/manual/install/index.html#id1) and get the required depdendencies for building from source. Also, install `xorg`, `xwayland`, `xrandr`and `wlr-randr`.
+Follow the [qtile-docs](https://docs.qtile.org/en/latest/manual/install/index.html#id1) and get the required dependencies for building from source. Also, install `xorg`, `xwayland`, `xrandr`and `wlr-randr`.
 
 ```bash
 yay -S --needed uv wlroots0.19 wayland wayland-protocols xorg-xwayland xorg-xrandr wlr-randr xorg
@@ -53,7 +53,7 @@ deactivate
 
 ### Programs
 
-Install in a fresh Arch Linux installation to avoid programs.
+Install in a fresh Arch Linux installation to avoid problems.
 
 **Arch Linux Specific packages**.
 
