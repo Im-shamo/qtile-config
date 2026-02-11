@@ -13,6 +13,26 @@ Go Here -> [README](https://github.com/Im-shamo/dotfiles/blob/main/README.md)
 
 The commands in this mini guide is only for **Arch Linux or it's derivatives**. If it is something else, just follow the instructions and get the required packages. You may have to build from source if the programs are not available in the distro repos.
 
+### Keybinds
+<details>
+<summary>Expand</summary>
+
+Note >>> `ctrl` + `alt` + `Delete`: Powermenu <<<
+
+![mod4.png](images/keybinds/mod4.png)
+
+![mod4-shift.png](images/keybinds/mod4-shift.png)
+
+![mod4-mod1.png](images/keybinds/mod4-mod1.png)
+
+![mod4-control.png](images/keybinds/mod4-control.png)
+
+![no_modifier.png](images/keybinds/no_modifier.png)
+
+</details>
+
+
+
 ### Installation
 
 #### Install from distro package repository.
@@ -22,7 +42,6 @@ Install `qtile` and all it's dependencies with `qtile-extras`. Also, install `xo
 ```bash
 yay -S --needed qtile qtile-extras alsa-utils canto-daemon cmus khal libpulse lm_sensors python-aiohttp python-bowler python-dbus-fast python-isort python-iwlib python-keyring python-libcst python-mpd2 python-prompt_toolkit python-psutil python-pytz python-setproctitle python-pyxdg xorg-xwayland xorg-xrandr wlr-randr xorg
 ```
-
 
 #### Install from source.
 
@@ -47,9 +66,7 @@ cd ~/.local/share/uv/tool/qtile
 source bin/active
 uv pip install "$qtileExtrasPath"
 deactivate
-
 ```
-
 
 ### Programs
 

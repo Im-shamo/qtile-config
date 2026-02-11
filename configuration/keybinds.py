@@ -97,7 +97,16 @@ keys = [
     # TODO: Add the rest of the keyboard controls
 ]
 
-if qtile.core.name == "x11":
+if qtile.core.name == "wayland":
+    keys.extend([
+        Key([mod, "mod1"], "l", lazy.spawn("swaylock -f -i ~/Pictures/current-wallpaper"), desc="Lock Qtile"),
+
+        # TODO: Screenshots
+        # Key([], "Print", lazy.spawn("spectacle -m -b -c"), desc="Take screenshot"),
+        # Key([mod], "Print", lazy.spawn("spectacle -g"), desc="Launch spectacle screenshot"),
+    ])
+
+else:
     keys.extend([
         Key([mod, "control"], "p", lazy.spawn(str(scripts_dir / "reload_picom.sh")), desc=f"Reload picom"),
         Key([mod, "mod1"], "l", lazy.spawn("xscreensaver-command -lock"), desc="Lock Qtile"),
@@ -105,12 +114,4 @@ if qtile.core.name == "x11":
         # Screenshots
         Key([], "Print", lazy.spawn("spectacle -m -b -c"), desc="Take screenshot"),
         Key([mod], "Print", lazy.spawn("spectacle -g"), desc="Launch spectacle screenshot"),
-    ])
-elif qtile.core.name == "wayland":
-    keys.extend([
-        Key([mod, "mod1"], "l", lazy.spawn("swaylock -f -i ~/Pictures/current-wallpaper"), desc="Lock Qtile"),
-
-        # TODO: Screenshots
-        # Key([], "Print", lazy.spawn("spectacle -m -b -c"), desc="Take screenshot"),
-        # Key([mod], "Print", lazy.spawn("spectacle -g"), desc="Launch spectacle screenshot"),
     ])

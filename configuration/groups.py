@@ -36,13 +36,6 @@ for my_group in my_groups:
             Key(
                 [mod, "shift"], 
                 group_key,
-                lazy.window.togroup(group.name, switch_group=True),
-                desc="move focused window to group {}".format(group.name)
-            ),
-
-            Key(
-                [mod, "mod1"], 
-                group_key,
                 lazy.window.togroup(group.name),
                 desc="move focused window to group {}".format(group.name)
             ),
