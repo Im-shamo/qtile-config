@@ -40,36 +40,12 @@ The commands in this mini guide is only for **Arch Linux or it's derivatives**. 
 
 #### Install from distro package repository.
 
-Install `qtile` and all it's dependencies with `qtile-extras`. Also, install `xorg`, `xwayland`, `xrandr`and `wlr-randr`.
+Install `qtile` and all it's dependencies with `qtile-extras`. Also, install `xorg`, `xwayland`, `xrandr` and `wlr-randr`.
 
 ```bash
 yay -S --needed qtile qtile-extras alsa-utils canto-daemon cmus khal libpulse lm_sensors python-aiohttp python-bowler python-dbus-fast python-isort python-iwlib python-keyring python-libcst python-mpd2 python-prompt_toolkit python-psutil python-pytz python-setproctitle python-pyxdg xorg-xwayland xorg-xrandr wlr-randr xorg
 ```
 
-#### Install from source.
-
-This is my prefer way. Though **not really recommended** because it can be unstable.
-
-Follow the [qtile-docs](https://docs.qtile.org/en/latest/manual/install/index.html#id1) and get the required dependencies for building from source. Also, install `xorg`, `xwayland`, `xrandr`and `wlr-randr`.
-
-```bash
-yay -S --needed uv wlroots0.19 wayland wayland-protocols xorg-xwayland xorg-xrandr wlr-randr xorg
-
-git clone https://github.com/qtile/qtile.git
-git clone https://github.com/elparaguayo/qtile-extras.git
-
-qtileExtrasPath="$PWD/qtile-extras"
-
-cd qtile
-make deps
-make build-wayland
-uv tool install .[dev,widgets,optional-core]
-
-cd ~/.local/share/uv/tool/qtile
-source bin/active
-uv pip install "$qtileExtrasPath"
-deactivate
-```
 
 ### Programs
 
