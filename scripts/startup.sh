@@ -2,7 +2,6 @@
 
 /usr/lib/polkit-kde-authentication-agent-1 &    # Polkit Agent
 dunst &                                         # Notification
-clipse -listen &                                # Clipboard manager
 
 if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
   ~/.config/qtile/scripts/xrandr_setup.sh &
