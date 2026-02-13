@@ -36,12 +36,12 @@ colours = {
 }
 
 ### Bar ###
-bar_margin = [6,4,2,4]
+bar_margin = [6, 4, 2, 4]
 
 ### Layouts ### 
-margin = [4,4,4,4]
-border_focus_colour = "0066cc"  #Light blue
-border_normal_colour = "004d66" #Dark Blue
+margin = [4, 4, 4, 4]
+border_focus_colour = "#0066cc"  # Light blue
+border_normal_colour = "#004d66"  # Dark Blue
 border_width = 3
 
 ### Startups ###

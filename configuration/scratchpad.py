@@ -23,34 +23,34 @@ groups.extend([
             DropDown(
                 "clipse",
                 launch_command["clipse"],
-                on_focus_lost_hide = False,
-                opacity = 1,
-                height = 0.4,
-                width = 0.4,
-                x = 0.3,
-                y = 0.3
+                on_focus_lost_hide=False,
+                opacity=1,
+                height=0.4,
+                width=0.4,
+                x=0.3,
+                y=0.3
             ),
             DropDown(
                 "btop",
                 launch_command["btop"],
-                on_focus_host_hide = False,
-                opacity = 1,
-                height = 0.6,
-                width = 0.6,
-                x = 0.2,
-                y = 0.2
+                on_focus_host_hide=False,
+                opacity=1,
+                height=0.6,
+                width=0.6,
+                x=0.2,
+                y=0.2
             ),
             DropDown(
                 "term",
                 launch_command["term"],
-                on_focus_host_hide = False,
-                opacity = 1,
-                height = 0.5,
-                width = 0.5,
-                x = 0.25,
-                y = 0.25
+                on_focus_host_hide=False,
+                opacity=1,
+                height=0.5,
+                width=0.5,
+                x=0.25,
+                y=0.25
             )
- 
+
         ]
     )
 ])

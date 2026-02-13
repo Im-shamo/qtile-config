@@ -1,7 +1,6 @@
 from libqtile.lazy import lazy
 from qtile_extras import widget
 from qtile_extras.widget.decorations import PowerLineDecoration
-from libqtile import qtile
 
 from configuration.variables import *
 
@@ -15,11 +14,12 @@ widget_defaults = {
 extension_default = widget_defaults.copy()
 
 arrow_right = {
-    "decorations": [PowerLineDecoration(path = "arrow_right")]
+    "decorations": [PowerLineDecoration(path="arrow_right")]
 }
 
+
 class MyWidgets:
-    def __init__(self, colours: dict[str, str] = colours):
+    def __init__(self):
         self.colours = colours
 
     def volume(self, **kwargs):
@@ -60,7 +60,7 @@ class MyWidgets:
             mouse_callbacks={
                 "Button1": lazy.spawn("waypaper --random"),
                 "Button3": launch_waypaper
-                },
+            },
             background=self.colours["PURPLE"],
             **kwargs
         )
@@ -73,27 +73,29 @@ class MyWidgets:
             "highlight": ['223538', '223538'],
         }
         return widget.GroupBox(
-            hide_unused = True,
-            borderwidth = 3,
-            disable_drag = True,
-            active = internal_colours["active"],
-            inactive = internal_colours["not_this_screen"],
-            highlight_method = "line",
-            highlight_color = internal_colours["highlight"],
-            this_screen_border = internal_colours["this_screen"],
-            this_current_screen_border = internal_colours["this_screen"],
-            other_screen_border = internal_colours["not_this_screen"],
-            other_current_screen_border = internal_colours["not_this_screen"],
-            foreground = internal_colours["not_this_screen"],
+            hide_unused=True,
+            borderwidth=3,
+            disable_drag=True,
+            active=internal_colours["active"],
+            inactive=internal_colours["not_this_screen"],
+            highlight_method="line",
+            highlight_color=internal_colours["highlight"],
+            this_screen_border=internal_colours["this_screen"],
+            this_current_screen_border=internal_colours["this_screen"],
+            other_screen_border=internal_colours["not_this_screen"],
+            other_current_screen_border=internal_colours["not_this_screen"],
+            foreground=internal_colours["not_this_screen"],
             **kwargs
         )
 
-    def power_button(self, **kwargs):
+    @staticmethod
+    def power_button(**kwargs):
         return widget.TextBox(
             fmt="󰐥",
             fontsize=26,
             mouse_callbacks={"Button1": lazy.spawn(str(powermenu))},
             **kwargs
         )
+
 
 my_widgets = MyWidgets()

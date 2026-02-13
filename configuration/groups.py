@@ -30,16 +30,14 @@ for my_group in my_groups:
                 [mod],
                 group_key,
                 lazy.group[group.name].toscreen(),
-                desc="Switch to group {}".format(group.name), 
+                desc="Switch to group {}".format(group.name),
             ),
 
             Key(
-                [mod, "shift"], 
+                [mod, "shift"],
                 group_key,
                 lazy.window.togroup(group.name),
                 desc="move focused window to group {}".format(group.name)
             ),
         ]
     )
-
-

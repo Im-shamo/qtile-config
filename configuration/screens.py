@@ -7,21 +7,21 @@ from configuration.helper_functions import is_desktop
 if qtile.core.name == "x11":
     if is_desktop():
         screens = [
-            Screen(top = my_bars.main_bar_x11_desktop())
+            Screen(top=my_bars.main_bar_x11_desktop())
         ]
     else:
         screens = [
-            Screen(top = my_bars.main_bar_x11_laptop())
+            Screen(top=my_bars.main_bar_x11_laptop())
         ]
 
 elif qtile.core.name == "wayland":
     if is_desktop():
         screens = [
-            Screen(top = my_bars.main_bar_wayland_desktop())
+            Screen(top=my_bars.main_bar_wayland_desktop())
         ]
     else:
         screens = [
-            Screen(top = my_bars.main_bar_wayland_laptop())
+            Screen(top=my_bars.main_bar_wayland_laptop())
         ]
 
 else:
