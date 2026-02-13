@@ -14,7 +14,8 @@ class MyBars:
     def main_bar_x11_desktop(self):
         return bar.Bar(
             [
-                widget.CurrentLayoutIcon(
+                widget.CurrentLayout(
+                    mode="icon",
                     mouse_callbacks={"Button1": lazy.next_layout()}
                 ),
                 my_widgets.group_box(),
@@ -60,7 +61,8 @@ class MyBars:
     def main_bar_x11_laptop(self):
         return bar.Bar(
             [
-                widget.CurrentLayoutIcon(
+                widget.CurrentLayout(
+                    mode="icon",
                     mouse_callbacks={"Button1": lazy.next_layout()}
                 ),
                 my_widgets.group_box(),
@@ -112,7 +114,8 @@ class MyBars:
     def secondary_bar_x11(self):
         return bar.Bar(
             [
-                widget.CurrentLayoutIcon(
+                widget.CurrentLayout(
+                    mode="icon",
                     mouse_callbacks={"Button1": lazy.next_layout()}
                 ),
                 my_widgets.group_box(),
@@ -134,7 +137,8 @@ class MyBars:
     def small_screen_bar_x11_desktop(self):
         return bar.Bar(
             [
-                widget.CurrentLayoutIcon(
+                widget.CurrentLayout(
+                    mode="icon",
                     mouse_callbacks={"Button1": lazy.next_layout()}
                 ),
                 my_widgets.group_box(),
@@ -160,7 +164,8 @@ class MyBars:
     def small_screen_bar_x11_laptop(self):
         return bar.Bar(
             [
-                widget.CurrentLayoutIcon(
+                widget.CurrentLayout(
+                    mode="icon",
                     mouse_callbacks={"Button1": lazy.next_layout()}
                 ),
                 my_widgets.group_box(),
@@ -192,7 +197,8 @@ class MyBars:
     def main_bar_wayland_desktop(self):
         return bar.Bar(
             [
-                widget.CurrentLayoutIcon(
+                widget.CurrentLayout(
+                    mode="icon",
                     mouse_callbacks={"Button1": lazy.next_layout()}
                 ),
                 my_widgets.group_box(),
@@ -238,7 +244,8 @@ class MyBars:
     def main_bar_wayland_laptop(self):
         return bar.Bar(
             [
-                widget.CurrentLayoutIcon(
+                widget.CurrentLayout(
+                    mode="icon",
                     mouse_callbacks={"Button1": lazy.next_layout()}
                 ),
                 my_widgets.group_box(),
@@ -290,7 +297,8 @@ class MyBars:
     def secondary_bar_wayland(self):
         return bar.Bar(
             [
-                widget.CurrentLayoutIcon(
+                widget.CurrentLayout(
+                    mode="icon",
                     mouse_callbacks={"Button1": lazy.next_layout()}
                 ),
                 my_widgets.group_box(),
@@ -312,7 +320,8 @@ class MyBars:
     def small_main_bar_wayland_laptop(self):
         return bar.Bar(
             [
-                widget.CurrentLayoutIcon(
+                widget.CurrentLayout(
+                    mode="icon",
                     mouse_callbacks={"Button1": lazy.next_layout()}
                 ),
                 my_widgets.group_box(),
@@ -344,7 +353,8 @@ class MyBars:
     def small_main_bar_wayland_desktop(self):
         return bar.Bar(
             [
-                widget.CurrentLayoutIcon(
+                widget.CurrentLayout(
+                    mode="icon",
                     mouse_callbacks={"Button1": lazy.next_layout()}
                 ),
                 my_widgets.group_box(),
