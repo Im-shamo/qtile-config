@@ -1,6 +1,5 @@
 from libqtile.config import Key
 from libqtile.lazy import lazy
-from libqtile import qtile
 
 from configuration.variables import *
 from configuration.helper_functions import swap_screens

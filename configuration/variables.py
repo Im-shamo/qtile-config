@@ -37,6 +37,8 @@ colours = {
 
 ### Bar ###
 bar_margin = [6, 4, 2, 4]
+bar_size = 26
+bar_opacity = 1
 
 ### Layouts ### 
 margin = [4, 4, 4, 4]

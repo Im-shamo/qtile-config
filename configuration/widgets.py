@@ -19,13 +19,14 @@ arrow_right = {
 
 
 class MyWidgets:
-    def __init__(self):
-        self.colours = colours
+    """
+    Contains my custom widgets
+    """
 
     def volume(self, **kwargs):
         return widget.Volume(
             fmt="  {:^2}",
-            background=self.colours["YELLOW"],
+            background=colours["YELLOW"],
             mouse_callbacks={"Button3": lazy.spawn("pavucontrol --tab=3")},
             mute_command="pactl set-sink-mute @DEFAULT_SINK@ toggle",
             check_mute_command="pactl get-sink-mute @DEFAULT_SINK@",
@@ -39,7 +40,7 @@ class MyWidgets:
     def microphone(self, **kwargs):
         return widget.Volume(
             fmt="  {:^2}",
-            background=self.colours["YELLOW"],
+            background=colours["YELLOW"],
             mouse_callbacks={"Button3": lazy.spawn("pavucontrol --tab=4")},
             mute_command="pactl set-source-mute @DEFAULT_SOURCE@ toggle",
             check_mute_command="pactl get-source-mute @DEFAULT_SOURCE@",
@@ -61,14 +62,14 @@ class MyWidgets:
                 "Button1": lazy.spawn("waypaper --random"),
                 "Button3": launch_waypaper
             },
-            background=self.colours["PURPLE"],
+            background=colours["PURPLE"],
             **kwargs
         )
 
     def group_box(self, **kwargs):
         internal_colours = {
             "active": "7cc942",
-            "this_screen": self.colours["LIGHT_BLUE"],
+            "this_screen": colours["LIGHT_BLUE"],
             "not_this_screen": "6A6A6A",
             "highlight": ['223538', '223538'],
         }
@@ -88,11 +89,10 @@ class MyWidgets:
             **kwargs
         )
 
-    @staticmethod
-    def power_button(**kwargs):
+    def power_button(self, **kwargs):
         return widget.TextBox(
             fmt="󰐥",
-            fontsize=26,
+            fontsize=bar_size,
             mouse_callbacks={"Button1": lazy.spawn(str(powermenu))},
             **kwargs
         )
