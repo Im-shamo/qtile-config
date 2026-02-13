@@ -2,7 +2,6 @@
 
 /usr/lib/polkit-kde-authentication-agent-1 &    # Polkit Agent
 dunst &                                         # Notification
-udiskie -t --appindicator && sleep 1 &       # Disk mounting
 clipse -listen &                                # Clipboard manager
 
 if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
@@ -21,6 +20,6 @@ fi
 ~/.config/qtile/scripts/wallpaper_changer.sh &  # Waypaper
 
 # Applets
-nm-applet && sleep 1 &
-blueman-applet && sleep 1 &
-
+udiskie -t --appindicator && sleep 1 &          # Disk mounting
+nm-applet && sleep 1 &                          # Network Manager
+blueman-applet && sleep 1 &                     # Bluetooth

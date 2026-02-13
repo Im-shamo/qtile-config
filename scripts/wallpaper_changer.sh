@@ -4,4 +4,3 @@ if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
 else
   waypaper --backend feh --random
 fi
-exit
