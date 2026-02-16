@@ -114,3 +114,4 @@ else:
         Key([], "Print", lazy.spawn("spectacle -m -b -c"), desc="Take screenshot"),
         Key([mod], "Print", lazy.spawn("spectacle -g"), desc="Launch spectacle screenshot"),
     ])
+

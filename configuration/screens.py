@@ -26,3 +26,4 @@ elif qtile.core.name == "wayland":
 
 else:
     screens = []
+

@@ -106,3 +106,4 @@ yay -S --needed \
     noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-hack-nerd \
     archlinux-xdg-menu xdg-user-dirs selectdefaultapplication-git
 ```
+

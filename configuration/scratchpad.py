@@ -38,3 +38,4 @@ keys.extend([
     Key([mod], 's', lazy.group["terminals"].dropdown_toggle("btop")),
     Key([mod], 'p', lazy.group["terminals"].dropdown_toggle("term")),
 ])
+

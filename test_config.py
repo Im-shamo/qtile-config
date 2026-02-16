@@ -1,4 +1,3 @@
-from libqtile import qtile
 from libqtile.backend.wayland import InputConfig
 
 from configuration import *
@@ -22,3 +21,4 @@ wl_input_rules = {
 idle_timers = []  # type: list
 idle_inhibitors = []  # type: list
 wmname = "LG3D"
+

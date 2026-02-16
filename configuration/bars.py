@@ -397,3 +397,4 @@ Wayland:
 - small_main_bar_wayland_laptop
 
 """
+

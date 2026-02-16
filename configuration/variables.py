@@ -53,3 +53,4 @@ scripts_dir = Path("~/.config/qtile/scripts").expanduser()
 logger.warning(f"{menu=}")
 logger.warning(f"{powermenu=}")
 logger.warning(f"{scripts_dir=}")
+

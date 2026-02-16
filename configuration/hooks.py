@@ -13,3 +13,4 @@ def startup_once():
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL
     )
+

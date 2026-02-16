@@ -22,3 +22,4 @@ wl_input_rules = {
 idle_timers = []  # type: list
 idle_inhibitors = []  # type: list
 wmname = "LG3D"
+
