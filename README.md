@@ -103,7 +103,7 @@ yay -S --needed \
     btop \
     brightnessctl \
     udiskie \
-    noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-hack-nerd \
+    noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-hack-nerd otf-droid-nerd \
     archlinux-xdg-menu xdg-user-dirs selectdefaultapplication-git
 ```
 
