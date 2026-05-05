@@ -21,7 +21,7 @@ class MyBars:
                 my_widgets.group_box(),
                 widget.WindowName(),
                 widget.Prompt(),
-                widget.Systray(),
+                widget.Systray(background="181e23"),
                 widget.TextBox(**arrow_right),
                 my_widgets.wallpaper_switcher(**arrow_right),
                 widget.Net(

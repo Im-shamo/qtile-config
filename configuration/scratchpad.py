@@ -11,7 +11,7 @@ groups.extend([
         [
             DropDown(
                 "btop",
-                f"{terminal} btop",
+                f"{terminal} -e btop",
                 on_focus_lost_hide=False,
                 opacity=1,
                 height=0.6,

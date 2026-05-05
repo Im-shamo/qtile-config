@@ -7,10 +7,7 @@ mod = "mod4"
 
 ### Programs ###
 file_explorer = "dolphin"
-if qtile.core.name == "wayland":
-    terminal = "foot"
-else:
-    terminal = "xterm"
+terminal = "konsole"
 terminal_name = terminal
 menu = Path("~/.config/rofi/launchers/type-1/launcher.sh").expanduser()
 powermenu = Path("~/.config/rofi/powermenu/type-1/powermenu.sh").expanduser()

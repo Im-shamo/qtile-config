@@ -6,7 +6,7 @@ dunst &                                         # Notification
 if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
   ~/.config/qtile/scripts/xrandr_setup.sh &
   picom && sleep 1 &                            # Compositor
-  powerkit && sleep 1 &                         # Power management
+  xscreensaver && sleep 1 &                     # Screensaver
   deskflow && sleep 1 &                         # Input device sharing
 
 elif [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
