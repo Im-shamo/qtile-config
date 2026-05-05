@@ -43,7 +43,7 @@ The commands in this mini guide is only for **Arch Linux or it's derivatives**. 
 Install `qtile` and all it's dependencies with `qtile-extras`. Also, install `xorg`, `xorg-xwayland`, `xorg-xrandr` and `wlr-randr`.
 
 ```bash
-yay -S --needed qtile qtile-extras alsa-utils canto-daemon jupyter_console khal libpulse lm_sensors python-aiohttp python-bowler python-dbus-fast python-isort python-iwlib python-keyring python-libcst python-mpd2 python-prompt_toolkit python-psutil python-pytz python-setproctitle python-xdg xorg wlr-randr
+yay -S --needed qtile qtile-extras alsa-utils canto-daemon khal libpulse lm_sensors python-aiohttp python-bowler python-dbus-fast python-isort python-iwlib python-keyring python-libcst python-mpd2 python-prompt_toolkit python-psutil python-pytz python-setproctitle python-xdg xorg wlr-randr
 ```
 
 
