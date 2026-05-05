@@ -6,7 +6,7 @@ from libqtile import qtile
 mod = "mod4"
 
 ### Programs ###
-file_explorer = "dolphin"
+file_explorer = "nemo"
 terminal = "konsole"
 terminal_name = terminal
 menu = Path("~/.config/rofi/launchers/type-1/launcher.sh").expanduser()
