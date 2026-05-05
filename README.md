@@ -43,7 +43,7 @@ The commands in this mini guide is only for **Arch Linux or it's derivatives**. 
 Install `qtile` and all it's dependencies with `qtile-extras`. Also, install `xorg`, `xorg-xwayland`, `xorg-xrandr` and `wlr-randr`.
 
 ```bash
-yay -S --needed qtile qtile-extras alsa-utils canto-daemon khal libpulse lm_sensors python-aiohttp python-bowler python-dbus-fast python-isort python-iwlib python-keyring python-libcst python-mpd2 python-prompt_toolkit python-psutil python-pytz python-setproctitle python-xdg xorg-xwayland xorg-xrandr xorg
+yay -S --needed qtile qtile-extras alsa-utils canto-daemon jupyter_console khal libpulse lm_sensors python-aiohttp python-bowler python-dbus-fast python-isort python-iwlib python-keyring python-libcst python-mpd2 python-prompt_toolkit python-psutil python-pytz python-setproctitle python-xdg xorg wlr-randr
 ```
 
 
@@ -53,13 +53,13 @@ Install in a fresh Arch Linux installation to avoid problems.
 
 **Arch Linux Specific packages**.
 
-- Terminal: `xterm`, `foot`
+- Terminal: `konsole`
 - Compositor: `picom`
 - Web Browser: `brave-bin`<sup>AUR</sup>
-- File Manager: `dolphin`
+- File Manager: `nemo`
 - Git: `git`
 - Menu: `rofi`, [rofi configs](https://github.com/Im-shamo/rofi)
-- Wallpaper: `waypaper`<sup>AUR</sup>, `feh`, `swww`
+- Wallpaper: `waypaper`<sup>AUR</sup>, `feh`
 - Theming: `nwg-look`, `qt6ct-kde`<sup>AUR</sup>, `qt5ct-kde`<sup>AUR</sup> 
 - Themes:
 	- Cursor: [Tachibana Hikari](https://ko-fi.com/s/c124f987ab)
@@ -67,11 +67,11 @@ Install in a fresh Arch Linux installation to avoid problems.
 	- Cursor Tools: [Win -> Linux repo](https://github.com/khayalhus/win2xcur-batch)
 	- Widgets: `breeze`, `breeze5`, `breeze-gtk`
 	- Icons: `breeze-icons`
-- Audio / Video Control: `playerctl`, `pavucontrol`, `alsa-utils`, `pipewire`, `pipewire-pulse`, `pipewire-alsa`, `wireplumber`
+- Audio / Video Control: `playerctl`, `pavucontrol`, `alsa-utils`, `pipewire`, `pipewire-pulse`, `pipewire-alsa`, `pipewire-jack`, `wireplumber`
 - Network: `networkmanager`, `network-manager-applet`
 - Bluetooth: `blueman`
 - Notifications: `dunst`
-- Lock (Xorg): `powerkit`<sup>AUR</sup>, `xscreensaver`
+- Lock (Xorg): `xscreensaver`
 - Lock (Wayland): `swayidle`, `swaylock`
 - Keyring: `gnome-keyring`, `seahorse`
 - Polkit Agent: `polkit-kde-agent`
@@ -83,20 +83,20 @@ Install in a fresh Arch Linux installation to avoid problems.
 
 ```bash  
 yay -S --needed \
-    xterm foot \
+    konsole \
     picom \
     brave-bin \
-    dolphin \
+    nemo \
     git \
     rofi \
-    waypaper feh swww \
+    waypaper feh \
     nwg-look qt6ct-kde qt5ct-kde \
     breeze breeze5 breeze-gtk breeze-icons \
-    playerctl pavucontrol alsa-utils pipewire pipewire-pulse pipewire-alsa wireplumber \
+    playerctl pavucontrol alsa-utils pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber \
     networkmanager network-manager-applet \
     blueman \
     dunst \
-    powerkit xscreensaver \
+    xscreensaver \
     swayidle swaylock \
     gnome-keyring seahorse \
     polkit-kde-agent \
