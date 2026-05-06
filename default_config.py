@@ -1,3 +1,7 @@
+# This file uses the default configuration from the Qtile project.
+# Source: https://github.com/qtile/qtile
+# Licensed under the MIT License.
+# Copyright (c) 2008-2026, the Qtile contributors. All rights reserved.
 import os
 
 import libqtile.resources
