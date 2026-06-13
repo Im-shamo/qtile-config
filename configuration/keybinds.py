@@ -93,7 +93,6 @@ keys = [
     # Laptop display brightness
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%"), desc="Increase backlight by 5%"),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-"), desc="Decrease backlight by 5%"),
-    # TODO: Add the rest of the keyboard controls
 ]
 
 if qtile.core.name == "wayland":
