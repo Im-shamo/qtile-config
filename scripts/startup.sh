@@ -5,13 +5,16 @@ dunst &                                         # Notification
 
 if [[ "$XDG_SESSION_TYPE" == "x11" ]]; then
   ~/.config/qtile/scripts/xrandr_setup.sh &
-  picom && sleep 1 &                            # Compositor
-  xscreensaver && sleep 1 &                     # Screensaver
-  deskflow && sleep 1 &                         # Input device sharing
+  picom &                                       # Compositor
+  sleep 1
+  xscreensaver &                                # Screensaver
+  sleep 1
+  deskflow &                                    # Input device sharing
+  sleep 1
 
 elif [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
   ~/.config/qtile/scripts/wlr-randr_setup.sh &
-  swayidle -w \     # session lock
+  swayidle -w \                                 # session lock
     timeout 300 'swaylock -f -i ~/Pictures/current-wallpaper' \
     before-sleep 'swaylock -f -i ~/Pictures/current-wallpaper' &
 fi
@@ -19,6 +22,8 @@ fi
 ~/.config/qtile/scripts/wallpaper_changer.sh &  # Waypaper
 
 # Applets
-udiskie -t --appindicator && sleep 1 &          # Disk mounting
-nm-applet && sleep 1 &                          # Network Manager
-blueman-applet && sleep 1 &                     # Bluetooth
+udiskie -t --appindicator &                     # Disk mounting
+sleep 1
+nm-applet &                                     # Network Manager
+sleep 1
+blueman-applet &                                # Bluetooth
