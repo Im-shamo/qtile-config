@@ -63,7 +63,7 @@ keys = [
     ### Application ###
 
     # App launchers
-    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod], "Return", lazy.spawn(terminal), desc=f"Launch terminal: {terminal}"),
     Key([mod], "r", lazy.spawn(menu), desc="Launch rofi"),
     Key([mod], "m", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key(["mod1", "control"], "Delete", lazy.spawn(powermenu), desc="Launch powermenu"),
