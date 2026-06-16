@@ -18,4 +18,3 @@ def is_desktop():
         return result.stdout[:-1] == "desktop"
     else:
         return False
-

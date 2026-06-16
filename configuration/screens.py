@@ -13,7 +13,6 @@ if qtile.core.name == "x11":
         screens = [
             Screen(top=my_bars.main_bar_x11_laptop())
         ]
-
 elif qtile.core.name == "wayland":
     if is_desktop():
         screens = [
@@ -23,7 +22,5 @@ elif qtile.core.name == "wayland":
         screens = [
             Screen(top=my_bars.main_bar_wayland_laptop())
         ]
-
 else:
     screens = []
-

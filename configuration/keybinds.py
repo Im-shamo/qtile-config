@@ -76,7 +76,7 @@ keys = [
     Key([mod, "shift"], "w", lazy.spawn("waypaper"), desc="Launch waypaper"),
 
     # Media Control
-    # Source 
+    # Source
     #   https://askubuntu.com/questions/97936/terminal-command-to-set-audio-volume
     #   https://www.reddit.com/r/qtile/comments/v718d8/how_to_setup_media_keys/
     # Audio
@@ -114,4 +114,3 @@ else:
         Key([], "Print", lazy.spawn("spectacle -m -b -c"), desc="Take screenshot"),
         Key([mod], "Print", lazy.spawn("spectacle -g"), desc="Launch spectacle screenshot"),
     ])
-

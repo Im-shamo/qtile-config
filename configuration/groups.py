@@ -41,4 +41,3 @@ for my_group in my_groups:
             ),
         ]
     )
-

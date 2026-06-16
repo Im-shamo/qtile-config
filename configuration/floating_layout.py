@@ -21,4 +21,3 @@ floating_layout = layout.Floating(
         Match(wm_class="clipse")
     ]
 )
-

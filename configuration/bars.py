@@ -37,7 +37,7 @@ class MyBars:
             ),
             my_widgets.group_box(),
             widget.WindowName()
-            ]
+        ]
 
     def base_bar_right(self) -> list[widget]:
         return [
@@ -71,7 +71,7 @@ class MyBars:
             ),
             my_widgets.power_button(),
             widget.Spacer(length=5)
-            ]
+        ]
 
     def base_bar_right_small(self) -> list[widget]:
         return [
@@ -85,7 +85,7 @@ class MyBars:
             ),
             my_widgets.power_button(),
             widget.Spacer(length=5)
-            ]
+        ]
 
     def base_bar_right_secondary(self) -> list[widget]:
         return [
@@ -97,8 +97,7 @@ class MyBars:
             ),
             my_widgets.power_button(),
             widget.Spacer(length=5)
-            ]
-
+        ]
 
     def main_bar_x11_desktop(self):
         widgets = self.base_bar_left() + [widget.Prompt(), widget.Systray()] + self.base_bar_right()

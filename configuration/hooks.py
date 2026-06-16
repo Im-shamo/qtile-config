@@ -4,6 +4,7 @@ import subprocess
 from configuration.variables import *
 from configuration.environment_variables import set_environment_variables
 
+
 @hook.subscribe.startup_once
 def startup_once():
     set_environment_variables()
@@ -13,4 +14,3 @@ def startup_once():
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL
     )
-
