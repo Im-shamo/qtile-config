@@ -109,6 +109,7 @@ else:
         Key([mod, "control"], "p", lazy.spawn(scripts_dir / "reload_picom.sh"), desc=f"Reload picom"),
         Key([mod, "mod1"], "l", lazy.spawn("xscreensaver-command -lock"), desc="Lock Qtile"),
 
+        # TODO Change to a different program because screenshoting in fullscreen is broken!?
         # Screenshots
         Key([], "Print", lazy.spawn("spectacle -m -b -c"), desc="Take screenshot"),
         Key([mod], "Print", lazy.spawn("spectacle -g"), desc="Launch spectacle screenshot"),
