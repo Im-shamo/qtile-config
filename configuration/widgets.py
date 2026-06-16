@@ -93,7 +93,7 @@ class MyWidgets:
         return widget.TextBox(
             fmt="󰐥",
             fontsize=bar_size,
-            mouse_callbacks={"Button1": lazy.spawn(str(powermenu))},
+            mouse_callbacks={"Button1": lazy.spawn(powermenu)},
             **kwargs
         )
 
